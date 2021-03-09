@@ -1,5 +1,5 @@
         <footer>
-            <p>Contact : 0641851668</p>
+            <p>Contact : 06.41.85.16.68</p>
         </footer>
     </body>
 </html>
