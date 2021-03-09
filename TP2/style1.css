@@ -1,0 +1,19 @@
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #0AD; /*Bleu*/
+    border: 2px solid blue;
+    width: fit-content ;
+    box-sizing: border-box;
+    margin: 20px 0px;
+    flex-direction: column; /*Axe principal = axe vertical*/
+}
+
+#currentpage{
+    flex: 1 1 50px;
+    width: 100%;
+    height: 30%;
+    background-color: cyan; /*Vert*/
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
