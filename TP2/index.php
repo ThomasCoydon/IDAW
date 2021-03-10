@@ -1,20 +1,26 @@
 <?php
-require_once('template_header.php');
+require_once("template_header.php");
+require_once("template_menu.php");
+$currentPageId = 'accueil';
+if(isset($_GET['page'])) {
+$currentPageId = $_GET['page'];
+}
 ?>
-        <header>
-            <h1>Thomas Coydon</h1>
-            <p>Accueil</p>
-        </header>
-        <?php
-        require_once('template_menu.php');
-        renderMenuToHTML('index');
-        ?>
-        <section>
-            <aside>
-                <h1>À propos de moi</h1>
-                <p>Je m'appelle Thomas</p>
-            </aside>
-        </section>
+<header class="bandeau_haut">
+<h1 class="titre">Thomas Coydon2</h1>
+</header>
 <?php
-require_once('template_footer.php');
+renderMenuToHTML($currentPageId);
+?>
+<section class="corps">
+<?php
+$pageToInclude = $currentPageId . ".php";
+if(is_readable($pageToInclude))
+require_once($pageToInclude);
+else
+require_once("error.php");
+?>
+</section>
+<?php
+require_once("template_footer.php");
 ?>
