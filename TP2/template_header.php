@@ -6,3 +6,6 @@
         media="screen" title="default" charset="utf-8" />
     </head>
 <body>
+<header class="bandeau_haut">
+    <h1 class="titre">Thomas Coydon</h1>
+</header>

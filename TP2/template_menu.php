@@ -17,17 +17,17 @@ $mymenu = array(
 'cv' => array( 'CV' ),
 'projets' => array('Projets'),
 'hobbies' => array('Hobbies'),
-'infos-techniques' => array('Infos techniques')
+'infostechniques' => array('Infos techniques')
 );
 //...
 echo'<nav class="menu">
 <ul>';
 foreach($mymenu as $pageId => $pageParameters) {
     if ($pageId==$currentPageId){
-        echo'<li><a id="currentpage" href="'.$pageId.'.php">'.$pageParameters[0].'</a></li>';
+        echo'<li><a id="currentpage" href="index.php?page='.$pageParameters[0].'">'.$pageParameters[0].'</a></li>';
     }
     else {
-        echo'<li><a href="'.$pageId.'.php">'.$pageParameters[0].'</a></li>';
+        echo'<li><a href="index.php?page='.$pageParameters[0].'">'.$pageParameters[0].'</a></li>';
     }
 }
 echo'</ul>
