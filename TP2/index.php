@@ -1,13 +1,20 @@
 <?php
 require_once("template_header.php");
 require_once("template_menu.php");
-$currentPageId = 'accueil';
+
+$currentPageId = 'index';
 if(isset($_GET['page'])) {
 $currentPageId = $_GET['page'];
 }
+
+$lang = 'fr';
+if(isset($_GET['lang'])) {
+$lang = $_GET['lang'];
+}
+
 ?>
 <?php
-renderMenuToHTML($currentPageId);
+renderMenuToHTML($currentPageId, $lang);
 ?>
 <section class="corps">
 <?php
