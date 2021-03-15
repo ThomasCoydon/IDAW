@@ -1,0 +1,10 @@
+#style_form{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #0AD; /*Bleu*/
+    border: 2px solid red;
+    width: fit-content ;
+    box-sizing: border-box;
+    margin: 20px 0px;
+    flex-direction: column; /*Axe principal = axe vertical*/
+}
