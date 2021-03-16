@@ -16,7 +16,6 @@ if( array_key_exists($tryLogin,$users) && $users[$tryLogin]==$tryPwd ) {
     $login = $tryLogin;
     session_start();
     $_SESSION['login'] = $login;
-    echo $_SESSION['login'];
 } else
     $errorText = "Erreur de login/password";
 } else

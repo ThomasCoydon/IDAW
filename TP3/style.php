@@ -19,5 +19,6 @@ echo'
     </select>
     <input type="submit" value="Appliquer" />
     </form>
-</html>'
+    <li><a href="connected.php"> Retour</a></li>
+</html>';
 ?>
