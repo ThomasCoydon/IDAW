@@ -36,23 +36,23 @@ $tryLogin=$_POST['login'];
 $tryPwd=$_POST['password'];
 
 
-foreach($user) {
-    if ($user['login']==$tryLogin && $user['password']==$tryPwd){
-        $successfullyLogged = true;
-        $login = $tryLogin;
-        session_start();
-        $_SESSION['login'] = $login;
-    }
+// foreach($user) {
+//     if ($user['login']==$tryLogin && $user['password']==$tryPwd){
+//         $successfullyLogged = true;
+//         $login = $tryLogin;
+//         session_start();
+//         $_SESSION['login'] = $login;
+//     }
 
 
 
 
-// si login existe et password correspond
-// if( array_key_exists($tryLogin,$users['login']) && $users['password']==$tryPwd ) {
-//     $successfullyLogged = true;
-//     $login = $tryLogin;
-//     session_start();
-//     $_SESSION['login'] = $login;
+si login existe et password correspond
+if( array_key_exists($tryLogin,$users['login']) && $users['password']==$tryPwd ) {
+    $successfullyLogged = true;
+    $login = $tryLogin;
+    session_start();
+    $_SESSION['login'] = $login;
 } else
     $errorText = "Erreur de login/password";
 } else
