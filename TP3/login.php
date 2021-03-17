@@ -3,6 +3,7 @@
         <title>Login</title>
         <link rel="stylesheet" href='.$style.'.css type="text/css" media="screen" charset="utf-8" />
     </head>
+    <form id="login_form" action="connected.php" method="POST">
     <table>
     <tr>
     <th>Login :</th>

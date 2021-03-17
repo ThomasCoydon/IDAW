@@ -10,16 +10,26 @@
         <?php
             $servername = 'localhost';
             $username = 'root';
-            
-            //On établit la connexion
-            $conn = mysqli_connect($servername, $username);
-            
-            //On vérifie la connexion
-            if(!$conn){
-                die('Erreur : ' .mysqli_connect_error());
+            $password = '';
+            $db_name = 'idaw';
+
+            try{
+                $dbco = new PDO("mysql:host=$servername;dbname=$db_name", $username, $password);
+                $dbco -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                
+                $sth = $dbco->prepare("SELECT * FROM users");
+                $sth->execute();
+
+                $resultat = $sth->fetchall(PDO::FETCH_ASSOC);
+
+                echo'<pre>';
+                print_r($resultat);
+                echo'</pre>';
             }
-            echo 'Connexion réussie';
-        
+
+            catch(PDOException $e){
+                echo "Erreur : ".$e->getMessage();
+            }        
         ?>
     </body>
 </html>
