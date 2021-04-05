@@ -12,7 +12,6 @@ function initAliment(){
     if (!$connect) {
         die("Connection failed: " . mysqli_connect_error());
     }
-    echo 'test';
 
     $query = "SELECT * FROM aliment";
     $result = mysqli_query($connect, $query);

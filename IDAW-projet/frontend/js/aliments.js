@@ -51,7 +51,9 @@ function addAlimentToTable(){
         $('#inputCal').val(),
         $('#inputWater').val(),
         $('#inputSugar').val(),
-        $('#inputSalt').val()
+        $('#inputSalt').val(),
+        $('#inputGlucides').val(),
+        $('#inputProteines').val()
     ]);
 
     let crud = `
@@ -121,8 +123,8 @@ function editRow(id){
     $('#inputWater').val(aliment.water);
     $('#inputSugar').val(aliment.sugar);
     $('#inputSalt').val(aliment.salt);
-    $('#inputSalt').val(aliment.glucides);
-    $('#inputSalt').val(aliment.proteines);
+    $('#inputGlucides').val(aliment.glucides);
+    $('#inputProteines').val(aliment.proteines);
 }
 
 function getAlimentsFromDB(){
