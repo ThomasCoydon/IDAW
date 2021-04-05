@@ -1,13 +1,10 @@
 <?php
 
 print_r($_POST);
-addAlimentToDB();
+editAlimentFromDB();
 
-function addAlimentToDB(){
-    $servername = "localhost";
-    $dbname = "projet";
-    $username = "root";
-    $password = "";
+function editAlimentFromDB(){
+    require_once('config.php');
 
     // Create connection
     $connect = mysqli_connect($servername, $username, $password, $dbname);
@@ -16,16 +13,18 @@ function addAlimentToDB(){
     if (!$connect) {
         die("Connection failed: " . mysqli_connect_error());
     }
-    echo "Connected successfully\n";
 
     $query = 
         "UPDATE aliment 
-        SET name=       '". $_POST['name']      ."', 
-            type=       '". $_POST['type']      ."',
+        SET nom=       '". $_POST['name']      ."', 
+            categorie=       '". $_POST['type']      ."',
             calories=   '". $_POST['calories']  ."',
-            water=      '". $_POST['water']     ."',
-            sugar=      '". $_POST['sugar']     ."',
-            salt=       '". $_POST['salt']      ."'
+            eau=      '". $_POST['water']     ."',
+            sucre=      '". $_POST['sugar']     ."',
+            sel=       '". $_POST['salt']      ."',
+            glucides=       '". $_POST['glucides']      ."',
+            proteines=       '". $_POST['proteines']      ."'
+
         WHERE id=".$_POST['id'];
             
     echo $query;
